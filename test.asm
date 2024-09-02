@@ -2,6 +2,8 @@
 ; make sure to link it with kernel32.lib and user32.lib
 ; also set entry point to "main"
 
+.code
+
 extern RegisterClassExA : proc
 extern CreateWindowExA : proc
 extern HeapAlloc : proc
@@ -20,8 +22,6 @@ extern GetMessageA : proc
 
 class_name DB "TestAsmWindowClass", 0
 window_name DB "Hello from MASM!", 0
-
-.code
 
 allocate PROC
 	SUB  RSP, 28h
