@@ -24,7 +24,7 @@ window_name DB "Hello from MASM!", 0
 .code
 
 allocate PROC
-  SUB  RSP, 28h
+	SUB  RSP, 28h
 	PUSH RCX
 	CALL GetProcessHeap
 	MOV  RCX, RAX
@@ -37,7 +37,7 @@ allocate PROC
 allocate ENDP
 
 free_memory PROC
-  SUB  RSP, 28h
+	SUB  RSP, 28h
 	PUSH RCX
 	CALL GetProcessHeap
 	MOV  RCX, RAX
@@ -58,7 +58,7 @@ get_app_hinstance PROC
 get_app_hinstance ENDP
 
 get_def_icon PROC
-  SUB  RSP, 20h
+	SUB  RSP, 20h
 	XOR  RCX, RCX
 	MOV  RDX, 7F00h
 	CALL LoadIconA
@@ -67,7 +67,7 @@ get_def_icon PROC
 get_def_icon ENDP
 
 get_def_cursor PROC
-  SUB  RSP, 20h
+	SUB  RSP, 20h
 	XOR  RCX, RCX
 	MOV  RDX, 7F00h
 	CALL LoadCursorA
@@ -85,7 +85,7 @@ wndproc PROC
 wndproc ENDP
 
 reg_class_2 PROC
-  SUB  RSP, 20h
+	SUB  RSP, 20h
 	CALL RegisterClassExA
 	ADD  RSP, 20h
 	RET
